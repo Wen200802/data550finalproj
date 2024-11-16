@@ -1,5 +1,5 @@
 ---
-title: "Final project part 2"
+title: "Final project"
 author: "Wen Song"
 date: "`r Sys.Date()`"
 output: html_document
