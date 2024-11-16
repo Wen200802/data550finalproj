@@ -1,0 +1,50 @@
+---
+title: "Final project part 2"
+author: "Wen Song"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+Alzheimer's Disease and Healthy Aging Data provide by CDC, which includes various factors associated with aging populations such as falls, overall health, diet (fruits and vegetables), vaccines, cognitive health, caregiving, alcohol consumption, health screenings, obesity, and smoking. The analysis focuses on examining the relationship between cognitive decline and factors such as age, race, and region using the Alzheimer's Disease and Healthy Aging Data. It aims to evaluate how these demographics influence cognitive health and to summarize the main topics and questions addressed in the dataset to guide future research and policy development.
+
+
+
+
+
+The table details the distribution of cognitive decline by region across different age groups, displaying counts and percentages for each category. It also segments the data by gender and race, showing no significant differences among age groups with a p-value = 0.3, indicating uniformity across demographics in terms of cognitive decline.
+
+
+```{r, table, echo=FALSE, message=FALSE}
+# Load and display summary table
+summary_tbl <- readRDS(here::here("output", "summary_table.rds"))
+summary_tbl
+```
+
+
+
+
+The figure titled "Frequency of Topics" displays a bar chart quantifying discussions on various aspects of cognitive decline among older adults. The topics, ordered by frequency, range from direct impacts like functional difficulties and need for assistance in daily activities, to engagements with healthcare professionals regarding cognitive concerns. Each bar reflects the number of mentions, highlighting the significant concern within the studied population.
+
+
+
+
+```{r, figure1, echo=FALSE}
+topic_plot <- readRDS(here::here("output", "topic_frequency_plot.rds"))
+print(topic_plot)
+
+```
+
+
+
+
+The figure titled "Frequency of Question" displays a bar chart summarizing responses to different queries about cognitive decline among older adults. Key insights include the frequency of worsening cognitive issues, impacts on daily activities, and communication with healthcare professionals. Each bar represents the count of responses, highlighting significant concerns related to cognitive health in daily living and social engagement.
+
+
+
+
+```{r, figure2, echo=FALSE}
+question_plot <- readRDS(here::here("output", "question_frequency_plot.rds"))
+print(question_plot)
+```
+
+
