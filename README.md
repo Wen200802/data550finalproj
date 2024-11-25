@@ -29,11 +29,20 @@ project_directory/
 
 - R version >= 4.0.0
 - Required R packages: `here`, `data.table`, `dplyr`, `ggplot2`, `labelled`, `gtsummary`, `stringr`
+- The project uses the `renv` package to ensure reproducibility by managing the package environment
 
 
 ### How to Run the Project
 
 This project involves two main steps: data processing and report generation. You can run these steps using the provided R scripts or use the Makefile for automation.
+
+#### Step 0: Restore Package Environment
+
+To ensure you have the correct package versions used in this project, run the following command:
+```r
+renv::restore()
+```
+This will synchronize your local package environment with the versions specified in the lock file.
 
 #### Step 1: Set Up the Project Environment
 Make sure all required CSV files (`Alzheimer_s_Disease_Part_1.csv` to `Alzheimer_s_Disease_Part_4.csv`) are located in the `code/` directory.
