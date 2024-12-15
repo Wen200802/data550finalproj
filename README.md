@@ -87,13 +87,13 @@ To generate the report and save it in the local `final_report/` folder, follow t
 **For Mac/Linux:**
 
 ```bash
-docker run --rm -v $(pwd)/final_report:/project/final_report project_image
+docker run --rm -v $(pwd)/final_report:/project/final_report wen2008/project_image
 ```
 
 **For Windows:**
 
 ```bash
-docker run --rm -v "$(pwd)/final_report:/project/final_report" project_image
+docker run --rm -v "$(pwd)/final_report:/project/final_report" wen2008/project_image
 ```
 
 ### Output

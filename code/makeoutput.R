@@ -1,3 +1,4 @@
+
 here::i_am(
   "code/makeoutput.R"
 )
@@ -9,6 +10,9 @@ library(ggplot2)
 library(labelled)
 library(gtsummary)
 library(stringr)
+library(data.table)
+library(cardx)
+library(broom)
 
 # Step 1: Load and Merge Data -------------------------------------------------
 # Read split CSV files using here::here() for locating files

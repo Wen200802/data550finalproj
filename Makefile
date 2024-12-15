@@ -20,22 +20,22 @@ clean:
 	rm -f output/*.rds output/report.html
 
 # Docker build
-PROJECTFILES = report.Rmd code/makeoutput.R code/renderreport.R Makefile
-RENVFILES = renv.lock renv/active.R renv/settings.json
+	PROJECTFILES = report.Rmd code/makeoutput.R code/renderreport.R Makefile
+	RENVFILES = renv.lock renv/active.R renv/settings.json
 
 # rule to build image
 # $@ evaluates to the target name in make 
 # $(<variable>) references a variable in make
 
 project image: $(PROJECTFILES) $(RENVFILES)
-    docker build -t project_image .
-    touch $@ 
+	docker build -t project_image .
+	touch $@ 
 
 # rule to build the report automatically in our container
 # $$(<command>) does command substitution in make
 
 final_report/report.html: project_image
-    # Mac 
-    docker run -v "$$(pwd)/final_report":/project/final_report project_image
-    # Windows 
-    docker run -v /"$$(pwd)/final_report":/project/final_report project_image
+	# Mac 
+	docker run -v "$$(pwd)/final_report":/project/final_report wen2008/project_image
+	# Windows 
+	docker run -v /"$$(pwd)/final_report":/project/final_report wen2008/project_image
