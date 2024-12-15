@@ -171,7 +171,7 @@
     },
     "cards": {
       "Package": "cards",
-      "Version": "0.2.2",
+      "Version": "0.4.0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -183,7 +183,24 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "b1aff1f353f1f384dfc1fb4dd78d903c"
+      "Hash": "2cd0d1966092de416f9b7fa1e88b6132"
+    },
+    "cardx": {
+      "Package": "cardx",
+      "Version": "0.2.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "cards",
+        "cli",
+        "dplyr",
+        "glue",
+        "lifecycle",
+        "rlang",
+        "tidyr"
+      ],
+      "Hash": "21f5ce5381d529b08783dca434af3003"
     },
     "cli": {
       "Package": "cli",
