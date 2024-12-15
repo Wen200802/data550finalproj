@@ -68,6 +68,39 @@ Make sure all required CSV files (`Alzheimer_s_Disease_Part_1.csv` to `Alzheimer
   - This script will generate the following file:
     - **`report.html`**: The final HTML report summarizing the analysis.
 
+## Docker Build and Run Instructions
+
+This project includes a Dockerfile to create a reproducible environment for generating the report.
+
+### Build the Docker Image
+
+To build the Docker image, run the following command in the project root directory:
+
+```bash
+docker build -t project_image .
+```
+
+### Run the Docker Container
+
+To generate the report and save it in the local `final_report/` folder, follow these instructions based on your system:
+
+**For Mac/Linux:**
+
+```bash
+docker run --rm -v $(pwd)/final_report:/project/final_report project_image
+```
+
+**For Windows:**
+
+```bash
+docker run --rm -v "$(pwd)/final_report:/project/final_report" project_image
+```
+
+### Output
+
+- The generated report (e.g., `report.html`) will be saved in the `final_report` folder on your local machine.
+
+
 ### Using the Makefile
 
 For an automated approach, use the provided `Makefile` to run the entire analysis.
